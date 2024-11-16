@@ -12,6 +12,8 @@ jobs:
         run: echo " ${{ toJSON(github.event) }}"
       - name: Get code
         uses: actions/checkout@v4
+      - name: Install Depend
+        run: npm ci
       - name: Test Code
         run: npm run test
       - name: Build Code

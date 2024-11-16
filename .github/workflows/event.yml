@@ -1,7 +1,8 @@
 name: Event Deep Dive
 on:
   pull_request:
-    types: opened
+    types: 
+      - opened
   workflow_dispatch:
 jobs:
   event:

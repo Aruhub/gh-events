@@ -1,5 +1,8 @@
 name: Event Deep Dive
-on: 
+on:
+  pull_request:
+    types: opened
+  workflow_dispatch:
 jobs:
   event:
     runs-on: ubuntu-latest
@@ -14,3 +17,5 @@ jobs:
         run: npm run test
       - name: Build Code
         run: npm run build
+      - name: Deploy code
+        run: echo "Deploying ...."
